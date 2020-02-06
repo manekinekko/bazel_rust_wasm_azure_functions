@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@bazel/jasmine": "1.2.4",
+    "@bazel/karma": "^1.2.4",
+    "jasmine": "3.5.0",
+    "@bazel/bazel": "^2.0.0"
+  },
+  "scripts": {},
+  "dependencies": {}
+}
