@@ -10,7 +10,7 @@ rust_binary(
     edition = "2018",
     deps = [
         "@io_bazel_rules_rust//wasm_bindgen/raze:wasm_bindgen"
-    ]
+    ]   
 )
 
 rust_wasm_bindgen(
@@ -37,5 +37,4 @@ nodejs_binary(
         ":hello_world_bindgen.js",
         ":hello_world_bindgen_bg.wasm"
     ],
-    args = ["--node_options=--expose-gc"],
 )

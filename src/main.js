@@ -2,7 +2,9 @@ process.env.VERBOSE_LOGS="1";
 
 const fs = require('fs');
 const path = require('path');
-const jsFile = path.join(__dirname, 'hello_world_bindgen.js');
+
+//. hello_world_bindgen.js is generated under /bazel-out/darwin-fastbuild/bin/src/
+const jsFile = path.join(path.resolve('src/hello_world_bindgen.js'));
 require(jsFile);
 
 
