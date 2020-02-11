@@ -12,11 +12,11 @@
 
 ## Generate and deploy Azure Function
 
-1. Install `hexa` from https://hexa.run
+1. Install the `hexa` CLI from https://hexa.run
 1. Generate a function project: `hexa init --just=functions`
 1. Review [functions/wasmify/wasm_gen/index.ts](./functions/wasmify/wasm_gen/index.ts) and [functions/wasmify/wasm_gen/wasm_loader.ts](./functions/wasmify/wasm_gen/wasm_loader.ts)
 1. Deploy the function app: `hexa deploy`
 
 ## Credits
 
-This project uses a list of nouns and adjectives found on this project: https://github.com/fnichol/names/tree/master/data
+This project uses a public list of nouns and adjectives found on this project: https://github.com/fnichol/names/tree/master/data. Please send a PR if you would like to remove any of the offensive adjectives or nouns (I will merge them immediately).

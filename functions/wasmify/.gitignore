@@ -36,6 +36,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+deploy.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

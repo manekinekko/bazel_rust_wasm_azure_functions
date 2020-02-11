@@ -11,7 +11,7 @@ pub fn generate_name_str(seed: i32) -> String {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 // #region
-    const ADJECTIVES: [&str; 1124] = [
+    const ADJECTIVES: [&str; 1116] = [
 "aback",
 "abaft",
 "abandoned",
@@ -250,14 +250,8 @@ pub fn generate_name_str(seed: i32) -> String {
 "difficult",
 "diligent",
 "direful",
-"dirty",
 "disagreeable",
-"disastrous",
 "discreet",
-"disgusted",
-"disgusting",
-"disillusioned",
-"dispensable",
 "distinct",
 "disturbed",
 "divergent",
@@ -306,7 +300,6 @@ pub fn generate_name_str(seed: i32) -> String {
 "envious",
 "equable",
 "equal",
-"erect",
 "erratic",
 "ethereal",
 "evanescent",
@@ -345,7 +338,6 @@ pub fn generate_name_str(seed: i32) -> String {
 "feeble",
 "feigned",
 "female",
-"fertile",
 "festive",
 "few",
 "fierce",
