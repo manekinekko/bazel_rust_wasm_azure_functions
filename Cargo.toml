@@ -10,10 +10,13 @@ edition = "2018"
 wasm-bindgen = "0.2.58"
 
 [lib]
-name = "hello_lib"
-path = "lib/src/lib.rs"
 crate-type = ["cdylib", "rlib"]
 
 [[bin]]
 name = "hello"
-path = "src/main.rs"
+path = "src/lib.rs"
+
+[profile.release]
+lto = true
+opt-level = "z"
+panic = "abort"

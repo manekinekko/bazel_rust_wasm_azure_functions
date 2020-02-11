@@ -1,4 +1,4 @@
-workspace(name = "rust_wasm_bazel_hello_world")
+workspace(name = "rust_wasm_bazel_hello_world", managed_directories = {"@npm": ["node_modules"]},)
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
@@ -10,6 +10,10 @@ http_archive(
         "https://github.com/bazelbuild/rules_rust/archive/e0dcca40f303e76c4347b9cf541d757edb029441.tar.gz",
     ],
 )
+# local_repository(
+#     name = "io_bazel_rules_rust",
+#     path = "/Users/wassimchegham/oss/rules_rust"
+# )
 
 http_archive(
     name = "bazel_skylib",
@@ -43,12 +47,6 @@ http_archive(
 load("@build_bazel_rules_nodejs//:index.bzl", "check_bazel_version", "npm_install")
 
 check_bazel_version(
-    message = """
-You no longer need to install Bazel on your machine.
-Angular has a dependency on the @bazel/bazel package which supplies it.
-Try running `yarn bazel` instead.
-    (If you did run that, check that you've got a fresh `yarn install`)
-""",
     minimum_bazel_version = "0.27.0",
 )
 
@@ -62,7 +60,3 @@ npm_install(
 # Install all bazel dependencies of our npm packages
 load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")
 install_bazel_dependencies()
-
-# Load npm_bazel_karma dependencies
-load("@npm_bazel_karma//:package.bzl", "npm_bazel_karma_dependencies")
-npm_bazel_karma_dependencies()
