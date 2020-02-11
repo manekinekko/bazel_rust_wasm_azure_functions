@@ -2,15 +2,16 @@ use wasm_bindgen::prelude::*;
 ////////////////////////////////////////////////////////////////////////////////////////////////
 #[wasm_bindgen]
 pub fn generate_name_str(seed: i32) -> String {
+    // the seed is coming from the JS side
     let a = seed % (ADJECTIVES.len() as i32);
     let b = seed % (NOUNS.len() as i32);
-    println!("{:?}", a);
-
-    return [ADJECTIVES[a as usize].to_string(), "-".to_string(), NOUNS[b as usize].to_string()].join("");
+    [ADJECTIVES[a as usize].to_string(), "-".to_string(), NOUNS[b as usize].to_string()].join("")
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 // #region
+// NOTE: when adding/removing words fron this array, 
+// please update the size of the array
     const ADJECTIVES: [&str; 1116] = [
 "aback",
 "abaft",
@@ -1131,6 +1132,8 @@ pub fn generate_name_str(seed: i32) -> String {
 ];
 // #endregion
 // #region
+// NOTE: when adding/removing words fron this array, 
+// please update the size of the array
 const NOUNS: [&str; 981] = [
 "able",
 "account",
