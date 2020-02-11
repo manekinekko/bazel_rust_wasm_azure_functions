@@ -1,4 +1,4 @@
-# Bazel + Rust + WASM = ❤️
+# Bazel + Rust + WASM + Azure = ❤️
 
 ## How-to Bazel
 
@@ -13,4 +13,9 @@
 
 1. Install `hexa` from https://hexa.run
 1. Generate a function project `hexa init --just=functions`
+1. Add the WASM code
 1. Deploy the function app `hexa deploy`
+
+## Credits
+
+This project uses a list of nouns and adjectives found on this project: https://github.com/fnichol/names/tree/master/data
