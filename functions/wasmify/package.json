@@ -1,0 +1,29 @@
+{
+  "name": "wasmify",
+  "version": "1.0.0",
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc",
+    "postbuild": "npm run cp:wasm",
+    "prebuild:production": "rimraf ./dist",
+    "build:production": "npm run prestart && npm prune --production",
+    "postbuild:production": "npm run cp:wasm",
+    "cp:wasm": "cp wasm_gen/generator.wasm dist/wasm_gen",
+    "watch": "tsc --w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm-run-all --parallel start:host watch",
+    "test": "echo \"No tests yet...\""
+  },
+  "description": "",
+  "devDependencies": {
+    "@azure/functions": "^1.0.1-beta1",
+    "@types/node": "^13.7.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.3.3"
+  },
+  "engines": {
+    "node": "^12"
+  }
+}

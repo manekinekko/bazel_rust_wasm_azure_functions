@@ -1,0 +1,15 @@
+{
+  "project": {
+    "location": "westeurope",
+    "name": "wasmify"
+  },
+  "storage": {
+    "location": "westeurope",
+    "name": "wasmify"
+  },
+  "functions": {
+    "hostName": "wasmify.azurewebsites.net",
+    "name": "wasmify",
+    "folder": "./functions"
+  }
+}
