@@ -1,5 +1,5 @@
 [package]
-name = "hello_world"
+name = "bazel_rust_wasm_azure_functions"
 version = "0.1.0"
 authors = ["Wassim Chegham <github@wassim.dev>"]
 edition = "2018"

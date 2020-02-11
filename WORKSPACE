@@ -1,4 +1,4 @@
-workspace(name = "rust_wasm_bazel_hello_world", managed_directories = {"@npm": ["node_modules"]},)
+workspace(name = "bazel_rust_wasm_azure_functions", managed_directories = {"@npm": ["node_modules"]},)
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 

@@ -1,5 +1,27 @@
 {
   "private": true,
+  "name": "bazel_rust_wasm_azure_functions",
+  "author": {
+    "name": "Wassim Chegham",
+    "email": "github@wassim.dev"
+  },
+  "bugs": {
+    "url": "https://github.com/manekinekko/bazel_rust_wasm_azure_functions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manekinekko/bazel_rust_wasm_azure_functions.git"
+  },
+  "keywords": [
+    "azure",
+    "bazel",
+    "rust",
+    "wasm",
+    "serverless",
+    "cloud",
+    "javascript"
+  ],
+  "license": "MIT",
   "scripts": {
     "prebuild": "mkdir -p dist",
     "build": "rustc --target wasm32-unknown-unknown -O --crate-type=cdylib -C lto=thin -C opt-level=z -C panic=abort src/lib.rs -o dist/lib.wasm"

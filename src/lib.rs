@@ -1,5 +1,14 @@
 use wasm_bindgen::prelude::*;
 ////////////////////////////////////////////////////////////////////////////////////////////////
+#[wasm_bindgen]
+pub fn generate_name_str(seed: i32) -> String {
+    let a = seed % (ADJECTIVES.len() as i32);
+    let b = seed % (NOUNS.len() as i32);
+    println!("{:?}", a);
+
+    return [ADJECTIVES[a as usize].to_string(), "-".to_string(), NOUNS[b as usize].to_string()].join("");
+}
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 // #region
     const ADJECTIVES: [&str; 1124] = [
@@ -2114,15 +2123,6 @@ const NOUNS: [&str; 981] = [
 "zoo"
 ];
 // #endregion
-
-#[wasm_bindgen]
-pub fn generate_name_str(seed: i32) -> String {
-    let a = seed % (ADJECTIVES.len() as i32);
-    let b = seed % (NOUNS.len() as i32);
-    println!("{:?}", a);
-
-    return [ADJECTIVES[a as usize].to_string(), "-".to_string(), NOUNS[b as usize].to_string()].join("");
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
