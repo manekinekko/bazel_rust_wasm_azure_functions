@@ -23,7 +23,15 @@
   ],
   "license": "MIT",
   "scripts": {
+    "postinstall": "cargo build",
     "prebuild": "mkdir -p dist",
-    "build": "rustc --target wasm32-unknown-unknown -O --crate-type=cdylib -C lto=thin -C opt-level=z -C panic=abort src/lib.rs -o dist/lib.wasm"
+    "bazel:build": "bazelisk build //src:hello_world_wasm",
+    "bazel:run": "VERBOSE_LOGS=1 bazelisk run //src:hello_world_wasm --sandbox_debug",
+    "bazel:query": "bazelisk query --noimplicit_deps 'deps(//src:hello_world_wasm)' --output graph | dot -Tpng > docs/graph.png",
+    "rustc:build": "rustc --target wasm32-unknown-unknown -O --crate-type=cdylib -C lto=thin -C opt-level=z -C panic=abort src/lib.rs -o dist/lib.wasm",
+    "build": "npm run bazel:build"
+  },
+  "dependencies": {
+    "@bazel/bazelisk": "^1.4.0"
   }
 }
