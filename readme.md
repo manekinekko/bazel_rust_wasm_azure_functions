@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/Open%20in-VS%20Codespaces-blue)](http://env.new/?name=wasm-bazel&repo=manekinekko/bazel_rust_wasm_azure_functions)
+
 # Bazel + Rust + WASM + Azure = ❤️
 
 ## How-to Bazel
